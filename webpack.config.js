@@ -52,7 +52,7 @@ module.exports = (env, argv) => ({
   },
 
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: ['dist']}),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'static', 'index.html'),
